@@ -11,6 +11,7 @@ import NotFound from './pages/404/NotFound';
 
 //Semantic UI CSS Setup
 import 'semantic-ui-css/semantic.min.css';
+import SearchContainer from "./pages/Search/SearchContainer";
 
 class App extends Component {
   render() {
@@ -40,6 +41,7 @@ class App extends Component {
                       <Route exact path='/home' component={HomeContainer}/>
                       <Route path='/trending' component={TrendingContainer}/>
                       <Route path='/popular' component={PopularContainer}/>
+                      <Route path='/search/:term' component={SearchContainer}/>
                       <Route component={NotFound} />
                   </Switch>
               </Grid.Column>
