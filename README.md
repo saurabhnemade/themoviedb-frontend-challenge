@@ -1,3 +1,10 @@
+#TheMovieDb Frontend Channelge
+
+[![Build Status](https://travis-ci.com/saurabhnemade/themoviedb-frontend-challenge.svg?branch=master)](https://travis-ci.com/saurabhnemade/themoviedb-frontend-challenge)
+
+
+Docket Image : https://hub.docker.com/r/saurabhnemade/themoviedb-frontend-challenge/tags/
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
