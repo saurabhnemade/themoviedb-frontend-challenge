@@ -5,6 +5,9 @@ import Popular from './Popular';
 
 const mapStateToProps = (state) => {
     return {
+        popularMovies: state.Popular.popularMovies,
+        isLoading: state.Popular.isLoading,
+        isError: state.Popular.isError
     };
 }
 
