@@ -7,12 +7,14 @@ import App from './app';
  * */
 import Home from './../../pages/Home/reducer/Home';
 import Trending from './../../pages/Trending/reducer/tredning';
+import Popular from './../../pages/Popular/reducer/popular';
 
 
 const rootReducer = combineReducers({
     App,
     Home,
-    Trending
+    Trending,
+    Popular
 });
 
 export default rootReducer;

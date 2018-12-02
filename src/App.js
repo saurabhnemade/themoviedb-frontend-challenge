@@ -5,6 +5,8 @@ import './App.css';
 
 /** Import pages here **/
 import HomeContainer from './pages/Home/HomeContainer';
+import TrendingContainer from './pages/Trending/TrendingContainer';
+import PopularContainer from './pages/Popular/PopularContainer';
 import NotFound from './pages/404/NotFound';
 
 //Semantic UI CSS Setup
@@ -23,7 +25,7 @@ class App extends Component {
                       <Menu.Item name='Trending' as={Link} to='/trending'>
                           Trending
                       </Menu.Item>
-                      <Menu.Item name='inbox' as={Link} to='/home'>
+                      <Menu.Item name='Popular' as={Link} to='/popular'>
                           Popular
                       </Menu.Item>
                       <Menu.Item>
@@ -36,8 +38,8 @@ class App extends Component {
                   <Switch>
                       <Route exact path='/' component={HomeContainer}/>
                       <Route exact path='/home' component={HomeContainer}/>
-                      <Route path='/roster' component={HomeContainer}/>
-                      <Route path='/schedule' component={HomeContainer}/>
+                      <Route path='/trending' component={TrendingContainer}/>
+                      <Route path='/popular' component={PopularContainer}/>
                       <Route component={NotFound} />
                   </Switch>
               </Grid.Column>
