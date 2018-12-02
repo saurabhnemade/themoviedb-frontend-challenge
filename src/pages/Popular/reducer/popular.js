@@ -11,13 +11,13 @@ const initial_state = {
 
 const Reducer = (state = initial_state, action) => {
     switch (action.type) {
-        case ActionTypes.TRENDING.TRENDING_LOAD_DEFAULT:
+        case ActionTypes.POPULAR.POPULAR_LOAD_DEFAULT:
             return {
                 ...state,
                 isLoading: true,
                 isError: false
             };
-        case ActionTypes.TRENDING.TRENDING_LOAD_DEFAULT_SUCCESS:
+        case ActionTypes.POPULAR.POPULAR_LOAD_DEFAULT_SUCCESS:
             return {
                 ...state,
                 isLoading: false,
@@ -27,7 +27,7 @@ const Reducer = (state = initial_state, action) => {
                 total_results: action.total_results,
                 popularMovies: action.results
             };
-        case ActionTypes.TRENDING.TRENDING_LOAD_DEFAULT_FAILURE:
+        case ActionTypes.POPULAR.POPULAR_LOAD_DEFAULT_FAILURE:
             return {
                 ...state,
                 isLoading: false,

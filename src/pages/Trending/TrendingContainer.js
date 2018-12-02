@@ -5,6 +5,9 @@ import Trending from './Trending';
 
 const mapStateToProps = (state) => {
     return {
+        trendingMovies: state.Trending.trendingMovies,
+        isError: state.Trending.isError,
+        isLoading: state.Trending.isLoading
     };
 };
 
