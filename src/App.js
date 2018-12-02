@@ -60,7 +60,7 @@ class App extends Component {
               <div>The MovieDB Frontend challenge</div>
               <div className="author" onClick={this.onGoToAuthor}>Created by @SaurabhNemade</div>
           </div>
-          <Grid className="">
+          <Grid>
               <Grid.Column width={3}>
                   <Menu vertical>
                       <Menu.Item name='Home' as={Link} to='/home'>
@@ -82,7 +82,7 @@ class App extends Component {
                   </Menu>
               </Grid.Column>
 
-              <Grid.Column width={12}>
+              <Grid.Column width={12} className="topMargin">
                   <Switch>
                       <Route exact path='/' component={HomeContainer}/>
                       <Route exact path='/home' component={HomeContainer}/>
