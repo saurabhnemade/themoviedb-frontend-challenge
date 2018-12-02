@@ -51,7 +51,7 @@ class App extends Component {
     return (
       <div className="App">
           <Grid className="">
-              <Grid.Column width={4}>
+              <Grid.Column width={3}>
                   <Menu vertical>
                       <Menu.Item name='Home' as={Link} to='/home'>
                           Home

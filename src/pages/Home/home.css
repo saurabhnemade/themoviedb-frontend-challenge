@@ -1,3 +1,8 @@
 .home {
     height: fill-available;
 }
+
+.home-title {
+    height: 48px;
+    font-size: 24px;
+}

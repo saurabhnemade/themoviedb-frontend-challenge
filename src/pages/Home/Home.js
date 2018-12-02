@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-// import { Button } from 'semantic-ui-react';
-import { Dimmer, Loader, Card } from 'semantic-ui-react';
+import { Dimmer, Loader, Card, Image, Popup, Rating, Segment } from 'semantic-ui-react';
 import './home.css';
 
 
@@ -45,19 +44,33 @@ export default class Home extends Component {
                 }
                 {this.props.isLoading === false && this.props.isError === false &&
                     <div>
-                        <div>
+                        <div className="home-title">
                             Recent Movies
                         </div>
                         <Card.Group>
                             {this.props.recentMovies.map((movie, index) => {
-                                return (
-                                    <Card key={index} link onClick={() => this.onMovieClick(movie)}>
+                                const movieCard = (
+                                    <Card link onClick={() => this.onMovieClick(movie)}>
                                         <Card.Content header={movie.title} />
-                                        <Card.Content description={movie.overview} />
+                                        <Image src={`http://image.tmdb.org/t/p/w342/${movie.poster_path}`}/>
                                         <Card.Content extra>
                                             Rating: {movie.vote_average}
                                         </Card.Content>
                                     </Card>
+                                );
+
+                                return (
+                                    <Popup key={index}
+                                           trigger={movieCard}
+                                           position='bottom left'>
+                                        <Popup.Header>Movie Information</Popup.Header>
+                                        <Popup.Content>
+                                            <Rating icon='star' defaultRating={movie.vote_average} maxRating={10} />
+                                            <div>
+                                                {movie.overview}
+                                            </div>
+                                        </Popup.Content>
+                                    </Popup>
                                 );
                             }, this)}
                         </Card.Group>
