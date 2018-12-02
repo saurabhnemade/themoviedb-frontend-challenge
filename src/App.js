@@ -49,9 +49,17 @@ class App extends Component {
       history.push(`/search/${this.state.searchTerm}`);
   }
 
+  onGoToAuthor() {
+      window.open("https://github.com/saurabhnemade");
+  }
+
   render() {
     return (
       <div className="App">
+          <div className="App-header">
+              <div>The MovieDB Frontend challenge</div>
+              <div className="author" onClick={this.onGoToAuthor}>Created by @SaurabhNemade</div>
+          </div>
           <Grid className="">
               <Grid.Column width={3}>
                   <Menu vertical>
