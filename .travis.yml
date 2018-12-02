@@ -1,9 +1,13 @@
-language: nodejs
+language: bash
 
 services:
   - docker
 
 before_install:
-  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
   - docker build -t saurabhnemade/themoviedb-frontend-challenge .
-  - docker push saurabhnemade/themoviedb-frontend-challenge
+
+deploy:
+  provider: script
+  script: bash docker_push
+  on:
+    branch: master
