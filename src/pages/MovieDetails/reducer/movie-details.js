@@ -39,6 +39,10 @@ const Reducer = (state = initial_state, action) => {
                 ...state,
                 casts: action.casts
             };
+        case ActionTypes.MOVIE_DETAIL.MOVIE_DETAIL_RESET:
+            return {
+                ...initial_state
+            };
         default:
             return state;
     }

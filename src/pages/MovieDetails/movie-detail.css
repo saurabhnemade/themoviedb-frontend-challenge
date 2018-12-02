@@ -14,3 +14,9 @@
 .movie-detail-profile {
     padding: 5px;
 }
+
+.movie-detail-title {
+    height: 48px;
+    font-size: 24px;
+    padding: 5px;
+}

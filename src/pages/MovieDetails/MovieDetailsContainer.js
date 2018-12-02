@@ -17,7 +17,8 @@ const mapDispatchToProps = (dispatch) => {
     return {
         _setMovieId : bindActionCreators(Actions._setMovieId, dispatch),
         _loadMovieDetails : bindActionCreators(Actions._loadMovieDetails, dispatch),
-        _loadMovieCast: bindActionCreators(Actions._loadMovieCast, dispatch)
+        _loadMovieCast: bindActionCreators(Actions._loadMovieCast, dispatch),
+        _reset: bindActionCreators(Actions._reset, dispatch)
     }
 };
 

@@ -16,10 +16,12 @@ export default class MovieDetails extends Component {
 
         _loadMovieDetails: PropTypes.func.isRequired,
         _loadMovieCast: PropTypes.func.isRequired,
-        _setMovieId: PropTypes.func.isRequired
+        _setMovieId: PropTypes.func.isRequired,
+        _reset: PropTypes.func.isRequired
     }
 
     componentDidMount() {
+        this.props._reset();
         this.props._setMovieId(this.props.match.params.movieId);
         this.props._loadMovieDetails(this.props.match.params.movieId);
         this.props._loadMovieCast(this.props.match.params.movieId);
@@ -32,7 +34,9 @@ export default class MovieDetails extends Component {
     render() {
         return (
             <div>
-                Movie Details : {this.props.details.original_title}
+                <div className="movie-detail-title">
+                    Movie Details : {this.props.details.original_title}
+                </div>
                 {!isEmpty(this.props.details) &&
                     <Grid columns={3}>
                         <Grid.Row>

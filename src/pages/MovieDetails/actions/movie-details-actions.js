@@ -38,6 +38,9 @@ const Actions = {
         } catch(error) {
             dispatch({ type: ActionTypes.MOVIE_DETAIL.MOVIE_CAST_LOAD_FAILURE });
         }
+    },
+    _reset: () => (dispatch) => {
+        dispatch({ type: ActionTypes.MOVIE_DETAIL.MOVIE_DETAIL_RESET });
     }
 };
 
