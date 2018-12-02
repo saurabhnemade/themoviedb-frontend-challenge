@@ -110,7 +110,7 @@ export default class MovieDetails extends Component {
                                             Website:
                                         </div>
                                         <div className="movie-detail-row-col">
-                                            <a href={this.props.details.homepage} target="_blank">
+                                            <a href={this.props.details.homepage} target="_blank" rel="noopener noreferrer">
                                                 {this.props.details.homepage}
                                             </a>
                                         </div>
