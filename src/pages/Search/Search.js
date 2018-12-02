@@ -20,6 +20,10 @@ export default class Search extends Component {
         this.props._loadSearchResults(this.props.match.params.term, 1);
     }
 
+    onMovieClick = (movie) => {
+        this.props.history.push(`/movie/${movie.id}`);
+    }
+
     render() {
         return (
             <div className="home">
