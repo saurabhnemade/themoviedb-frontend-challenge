@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import {Switch, Route, Link} from 'react-router-dom';
 import {Menu, Input, Grid} from 'semantic-ui-react';
 import './App.css';
+import history from './history';
 
 /** Import pages here **/
 import HomeContainer from './pages/Home/HomeContainer';
@@ -14,7 +16,6 @@ import 'semantic-ui-css/semantic.min.css';
 import SearchContainer from "./pages/Search/SearchContainer";
 
 class App extends Component {
-
   constructor(props) {
       super(props);
 
@@ -43,8 +44,7 @@ class App extends Component {
   }
 
   onSearchAction() {
-      //do the route change
-      console.log('Search term', this.state.searchTerm);
+      history.push(`/search/${this.state.searchTerm}`);
   }
 
   render() {
