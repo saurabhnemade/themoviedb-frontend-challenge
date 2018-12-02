@@ -24,6 +24,10 @@ const Actions = {
         } catch (error) {
             dispatch({type: ActionTypes.CAST_DETAIL.CAST_DETAIL_LOAD_FAILURE});
         }
+    },
+
+    _reset: () => (dispatch) => {
+        dispatch({ type: ActionTypes.CAST_DETAIL.CAST_DETAIL_RESET });
     }
 };
 

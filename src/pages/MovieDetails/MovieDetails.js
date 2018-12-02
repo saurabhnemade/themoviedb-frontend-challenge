@@ -7,6 +7,7 @@ import './movie-detail.css';
 export default class MovieDetails extends Component {
     static propTypes = {
         match: PropTypes.object,
+        history: PropTypes.object,
         details: PropTypes.object,
         casts: PropTypes.array,
         movieId: PropTypes.string,

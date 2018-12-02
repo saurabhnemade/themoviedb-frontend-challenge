@@ -10,10 +10,12 @@ export default class CastDetails extends Component {
         details: PropTypes.object,
 
         _setCastId: PropTypes.func.isRequired,
-        _loadCastDetails: PropTypes.func.isRequired
+        _loadCastDetails: PropTypes.func.isRequired,
+        _reset: PropTypes.func.isRequired
     }
 
     componentDidMount() {
+        this.props._reset();
         this.props._setCastId(this.props.match.params.castId);
         this.props._loadCastDetails(this.props.match.params.castId);
     }

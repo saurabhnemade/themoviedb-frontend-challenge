@@ -27,6 +27,10 @@ const Reducer = (state = initial_state, action) => {
                 isLoading: false,
                 isError: false
             };
+        case ActionTypes.CAST_DETAIL.CAST_DETAIL_RESET:
+            return {
+                ...initial_state
+            };
         default:
             return state;
     }

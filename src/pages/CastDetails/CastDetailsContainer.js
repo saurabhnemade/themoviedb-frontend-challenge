@@ -16,6 +16,7 @@ const mapDispatchToProps = (dispatch) => {
     return {
         _setCastId : bindActionCreators(Actions._setCastId, dispatch),
         _loadCastDetails : bindActionCreators(Actions._loadCastDetails, dispatch),
+        _reset: bindActionCreators(Actions._reset, dispatch)
     }
 };
 
