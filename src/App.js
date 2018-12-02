@@ -50,7 +50,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-          <Grid>
+          <Grid className="">
               <Grid.Column width={4}>
                   <Menu vertical>
                       <Menu.Item name='Home' as={Link} to='/home'>

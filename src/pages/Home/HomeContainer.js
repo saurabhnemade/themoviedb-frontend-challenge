@@ -6,6 +6,9 @@ import Home from './Home';
 
 const mapStateToProps = (state) => {
     return {
+        recentMovies: state.Home.recentMovies,
+        isLoading: state.Home.isLoading,
+        isError: state.Home.isError
     };
 }
 
