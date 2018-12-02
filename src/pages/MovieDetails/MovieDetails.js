@@ -25,61 +25,6 @@ export default class MovieDetails extends Component {
     }
 
     render() {
-
-        const mock = {
-            "adult": false,
-            "backdrop_path": "/VuukZLgaCrho2Ar8Scl9HtV3yD.jpg",
-            "belongs_to_collection": null,
-            "budget": 116000000,
-            "homepage": "http://www.venom.movie/site/",
-            "id": 335983,
-            "imdb_id": "tt1270797",
-            "poster_path": "/2uNW4WbgBXL25BAbXGLnLqX71Sw.jpg",
-            "production_companies": [
-                {
-                    "id": 5,
-                    "logo_path": "/71BqEFAF4V3qjjMPCpLuyJFB9A.png",
-                    "name": "Columbia Pictures",
-                    "origin_country": "US"
-                },
-                {
-                    "id": 7505,
-                    "logo_path": "/837VMM4wOkODc1idNxGT0KQJlej.png",
-                    "name": "Marvel Entertainment",
-                    "origin_country": "US"
-                },
-                {
-                    "id": 34,
-                    "logo_path": "/GagSvqWlyPdkFHMfQ3pNq6ix9P.png",
-                    "name": "Sony Pictures",
-                    "origin_country": "US"
-                },
-                {
-                    "id": 31828,
-                    "logo_path": null,
-                    "name": "Avi Arad Productions",
-                    "origin_country": "US"
-                }
-            ],
-            "production_countries": [
-                {
-                    "iso_3166_1": "US",
-                    "name": "United States of America"
-                }
-            ],
-            "runtime": 112,
-            "status": "Released",
-            "tagline": "The world has enough Superheroes.",
-        };
-
-        //cast_id: 13
-        // character: "Anne Weying"
-        // credit_id: "59cbebd2c3a368773d017419"
-        // gender: 1
-        // id: 1812
-        // name: "Michelle Williams"
-        // order: 1
-        // profile_path: "/r4HQM2gO9Q7Ti7sJcRE4hcP8ddN.jpg"
         return (
             <div>
                 Movie Details : {this.props.details.original_title}
@@ -156,7 +101,9 @@ export default class MovieDetails extends Component {
                                             Website:
                                         </div>
                                         <div className="movie-detail-row-col">
-                                            {this.props.details.homepage}
+                                            <a href={this.props.details.homepage} target="_blank">
+                                                {this.props.details.homepage}
+                                            </a>
                                         </div>
                                     </div>
                                 }
