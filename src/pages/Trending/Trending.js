@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from "prop-types";
 import {Dimmer, Image, Loader, Rating, Card, Popup} from "semantic-ui-react";
+import "./trending.css";
 
 export default class Trending extends Component {
     static propTypes = {
@@ -26,7 +27,7 @@ export default class Trending extends Component {
 
     render() {
         return (
-            <div className="popular">
+            <div className="trending">
                 {this.props.isLoading && this.props.isError === false &&
                     <Dimmer active>
                         <Loader content='Loading' />
@@ -37,8 +38,8 @@ export default class Trending extends Component {
                 }
                 {this.props.isLoading === false && this.props.isError === false &&
                     <div>
-                        <div className="popular-title">
-                            Popular Movies
+                        <div className="trending-title">
+                            Trending Movies
                         </div>
                         <Card.Group>
                             {this.props.trendingMovies.map((movie, index) => {
