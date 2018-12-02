@@ -25,6 +25,12 @@
   height: 40vmin;
 }
 
+.pagination-container {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px;
+}
+
 /*.App-header {*/
   /*background-color: #282c34;*/
   /*min-height: 100vh;*/

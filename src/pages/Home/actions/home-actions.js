@@ -3,7 +3,7 @@ import ActionTypes from './../../../actions/index';
 import { buildUrl} from "../../../Utils/Url";
 
 const Actions = {
-    _loadDefault: () => async (dispatch) => {
+    _loadDefault: (page) => async (dispatch) => {
         try {
             dispatch({ type: ActionTypes.HOME.HOME_LOAD_DEFAULT });
             const params = {
@@ -11,7 +11,7 @@ const Actions = {
                 sort_by: "popularity.desc",
                 include_adult: false,
                 include_video: false,
-                page: 1
+                page: page
             };
 
             const url = buildUrl(constants.API_KEY, constants.API_BASE_URL, "discover/movie", params);
@@ -27,6 +27,9 @@ const Actions = {
         } catch(error) {
             dispatch({ type: ActionTypes.HOME.HOME_LOAD_DEFAULT_FAILURE });
         }
+    },
+    _setPage: (page) => (dispatch) => {
+        dispatch({ type: ActionTypes.HOME.HOME_SET_PAGE_NUMBER, page });
     }
 };
 
