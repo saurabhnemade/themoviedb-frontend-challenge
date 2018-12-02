@@ -16,10 +16,6 @@ export default class Home extends Component {
       _loadDefault: PropTypes.func.isRequired
     };
 
-    constructor(props) {
-        super(props);
-    }
-
     componentDidMount() {
         if (this.props.recentMovies.length === 0 ) {
             this.props._loadDefault();
@@ -27,7 +23,6 @@ export default class Home extends Component {
     }
 
     onMovieClick = (movie) => {
-        console.log('movie clicked', movie);
         this.props.history.push(`/movie/${movie.id}`);
     }
 
