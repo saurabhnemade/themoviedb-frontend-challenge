@@ -1,4 +1,4 @@
-#TheMovieDb Frontend Channelge
+# TheMovieDb Frontend Channelge
 
 [![Build Status](https://travis-ci.com/saurabhnemade/themoviedb-frontend-challenge.svg?branch=master)](https://travis-ci.com/saurabhnemade/themoviedb-frontend-challenge)
 
@@ -49,3 +49,16 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+
+## Screenshots
+
+![](screenshots/1.png)
+![](screenshots/2.png)
+![](screenshots/3.png)
+![](screenshots/4.png)
+![](screenshots/5.png)
+![](screenshots/6.png)
+![](screenshots/7.png)
+![](screenshots/8.png)
+
