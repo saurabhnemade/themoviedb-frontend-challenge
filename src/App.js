@@ -24,21 +24,34 @@ class App extends Component {
 
       /**
        * I hate doing bind in between render and they will create multiple instances of same function
-       * in case of .map so I prefer this one.
+       * in case of .map so I prefer this one. There is another way, but I found it bit confusing for readers/bug fixers so this one
        * @type {any}
        */
       this.onChangeSearchTerm = this.onChangeSearchTerm.bind(this);
+      this.onKeyPressSearchTerm = this.onKeyPressSearchTerm.bind(this);
+      this.onSearchAction = this.onSearchAction.bind(this);
   }
 
   onChangeSearchTerm(event) {
-      this.setState({searchTerm: event.target.value})
+      this.setState({searchTerm: event.target.value});
+  }
+
+  onKeyPressSearchTerm(event) {
+      if (event.key === 'Enter') {
+          this.onSearchAction();
+      }
+  }
+
+  onSearchAction() {
+      //do the route change
+      console.log('Search term', this.state.searchTerm);
   }
 
   render() {
     return (
       <div className="App">
           <Grid>
-              <Grid.Column width={8}>
+              <Grid.Column width={4}>
                   <Menu vertical>
                       <Menu.Item name='Home' as={Link} to='/home'>
                           Home
@@ -50,14 +63,16 @@ class App extends Component {
                           Popular
                       </Menu.Item>
                       <Menu.Item>
-                          <Input icon='search' placeholder='Search Movie by title...'
+                          <Input icon='search'
+                                 placeholder='Search Movie by title...'
                                  onChange={this.onChangeSearchTerm}
+                                 onKeyPress={this.onKeyPressSearchTerm}
                                  value={this.state.searchTerm} />
                       </Menu.Item>
                   </Menu>
               </Grid.Column>
 
-              <Grid.Column width={8}>
+              <Grid.Column width={12}>
                   <Switch>
                       <Route exact path='/' component={HomeContainer}/>
                       <Route exact path='/home' component={HomeContainer}/>
