@@ -6,11 +6,13 @@ import App from './app';
  * I didn't ported it yet to React 16 api's but its example would describe exact modularity case
  * */
 import Home from './../../pages/Home/reducer/Home';
+import Trending from './../../pages/Trending/reducer/tredning';
 
 
 const rootReducer = combineReducers({
     App,
-    Home
+    Home,
+    Trending
 });
 
 export default rootReducer;
