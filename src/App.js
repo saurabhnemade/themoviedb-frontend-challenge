@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import {Switch, Route, Link} from 'react-router-dom';
 import {Menu, Input, Grid} from 'semantic-ui-react';
 import './App.css';
@@ -9,11 +8,12 @@ import history from './history';
 import HomeContainer from './pages/Home/HomeContainer';
 import TrendingContainer from './pages/Trending/TrendingContainer';
 import PopularContainer from './pages/Popular/PopularContainer';
+import MovieDetailsContainer from "./pages/MovieDetails/MovieDetailsContainer";
+import SearchContainer from "./pages/Search/SearchContainer";
 import NotFound from './pages/404/NotFound';
 
 //Semantic UI CSS Setup
 import 'semantic-ui-css/semantic.min.css';
-import SearchContainer from "./pages/Search/SearchContainer";
 
 class App extends Component {
   constructor(props) {
@@ -79,6 +79,7 @@ class App extends Component {
                       <Route path='/trending' component={TrendingContainer}/>
                       <Route path='/popular' component={PopularContainer}/>
                       <Route path='/search/:term' component={SearchContainer}/>
+                      <Route path='/movie/:movieId' component={MovieDetailsContainer} />
                       <Route component={NotFound} />
                   </Switch>
               </Grid.Column>

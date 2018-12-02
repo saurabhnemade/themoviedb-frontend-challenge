@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { Dimmer, Loader, Card, Image, Popup, Rating, Segment } from 'semantic-ui-react';
+import { Dimmer, Loader, Card, Image, Popup, Rating } from 'semantic-ui-react';
 import './home.css';
 
 

@@ -1,0 +1,16 @@
+.movie-detail-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.movie-detail-row-col {
+    flex: 1;
+}
+
+.movie-detail-row-col-fixed-width {
+    width: 150px;
+}
+
+.movie-detail-profile {
+    padding: 5px;
+}

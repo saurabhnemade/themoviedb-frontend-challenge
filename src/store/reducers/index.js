@@ -9,13 +9,15 @@ import Home from './../../pages/Home/reducer/Home';
 import Trending from './../../pages/Trending/reducer/tredning';
 import Popular from './../../pages/Popular/reducer/popular';
 import Search from './../../pages/Search/reducer/search';
+import MovieDetails from './../../pages/MovieDetails/reducer/movie-details';
 
 const rootReducer = combineReducers({
     App,
     Home,
     Trending,
     Popular,
-    Search
+    Search,
+    MovieDetails
 });
 
 export default rootReducer;
