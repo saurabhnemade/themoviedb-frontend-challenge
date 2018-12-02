@@ -14,6 +14,26 @@ import 'semantic-ui-css/semantic.min.css';
 import SearchContainer from "./pages/Search/SearchContainer";
 
 class App extends Component {
+
+  constructor(props) {
+      super(props);
+
+      this.state = {
+          searchTerm: ""
+      };
+
+      /**
+       * I hate doing bind in between render and they will create multiple instances of same function
+       * in case of .map so I prefer this one.
+       * @type {any}
+       */
+      this.onChangeSearchTerm = this.onChangeSearchTerm.bind(this);
+  }
+
+  onChangeSearchTerm(event) {
+      this.setState({searchTerm: event.target.value})
+  }
+
   render() {
     return (
       <div className="App">
@@ -30,7 +50,9 @@ class App extends Component {
                           Popular
                       </Menu.Item>
                       <Menu.Item>
-                          <Input icon='search' placeholder='Search Movie by title...' />
+                          <Input icon='search' placeholder='Search Movie by title...'
+                                 onChange={this.onChangeSearchTerm}
+                                 value={this.state.searchTerm} />
                       </Menu.Item>
                   </Menu>
               </Grid.Column>
