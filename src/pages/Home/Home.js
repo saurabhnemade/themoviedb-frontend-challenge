@@ -30,7 +30,7 @@ export default class Home extends Component {
         return (
             <div className="home">
                 {this.props.isLoading && this.props.isError === false &&
-                    <Dimmer active>
+                    <Dimmer active inverted>
                         <Loader content='Loading' />
                     </Dimmer>
                 }

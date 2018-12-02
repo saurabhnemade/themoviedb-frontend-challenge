@@ -29,7 +29,7 @@ export default class Popular extends Component {
         return (
             <div className="popular">
                 {this.props.isLoading && this.props.isError === false &&
-                    <Dimmer active>
+                    <Dimmer active inverted>
                         <Loader content='Loading' />
                     </Dimmer>
                 }
