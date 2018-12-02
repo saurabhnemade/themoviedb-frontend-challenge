@@ -7,13 +7,16 @@ const mapStateToProps = (state) => {
     return {
         trendingMovies: state.Trending.trendingMovies,
         isError: state.Trending.isError,
-        isLoading: state.Trending.isLoading
+        isLoading: state.Trending.isLoading,
+        page: state.Trending.page,
+        total_pages: state.Trending.total_pages
     };
 };
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        _loadTrendingMovie : bindActionCreators(Actions._loadTrendingMovie, dispatch)
+        _loadTrendingMovie : bindActionCreators(Actions._loadTrendingMovie, dispatch),
+        _setPage: bindActionCreators(Actions._setPage, dispatch)
     }
 };
 

@@ -33,6 +33,11 @@ const Reducer = (state = initial_state, action) => {
                 isLoading: false,
                 isError: true
             };
+        case ActionTypes.POPULAR.POPULAR_SET_PAGE_NUMBER:
+            return {
+                ...state,
+                page: action.page
+            };
         default:
             return state;
     }

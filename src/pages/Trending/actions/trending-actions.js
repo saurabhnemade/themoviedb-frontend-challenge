@@ -22,6 +22,9 @@ const Actions = {
         } catch(error) {
             dispatch({ type: ActionTypes.TRENDING.TRENDING_LOAD_DEFAULT_FAILURE });
         }
+    },
+    _setPage: (page) => (dispatch) => {
+        dispatch({ type: ActionTypes.TRENDING.TRENDING_SET_PAGE_NUMBER, page });
     }
 }
 

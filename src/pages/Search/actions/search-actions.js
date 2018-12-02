@@ -31,6 +31,9 @@ const Actions = {
         } catch (error) {
             dispatch({ type: ActionTypes.SEARCH.SEARCH_LOAD_DEFAULT_FAILURE });
         }
+    },
+    _setPage: (page) => (dispatch) => {
+        dispatch({ type: ActionTypes.SEARCH.SEARCH_SET_PAGE_NUMBER, page });
     }
 };
 

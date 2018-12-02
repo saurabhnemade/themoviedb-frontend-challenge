@@ -7,13 +7,16 @@ const mapStateToProps = (state) => {
     return {
         popularMovies: state.Popular.popularMovies,
         isLoading: state.Popular.isLoading,
-        isError: state.Popular.isError
+        isError: state.Popular.isError,
+        page: state.Popular.page,
+        total_pages: state.Popular.total_pages
     };
 }
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        _loadPopularMovies : bindActionCreators(Actions._loadPopularMovies, dispatch)
+        _loadPopularMovies : bindActionCreators(Actions._loadPopularMovies, dispatch),
+        _setPage: bindActionCreators(Actions._setPage, dispatch)
     }
 };
 
