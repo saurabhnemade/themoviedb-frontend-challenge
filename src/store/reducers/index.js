@@ -10,6 +10,7 @@ import Trending from './../../pages/Trending/reducer/tredning';
 import Popular from './../../pages/Popular/reducer/popular';
 import Search from './../../pages/Search/reducer/search';
 import MovieDetails from './../../pages/MovieDetails/reducer/movie-details';
+import CastDetails from './../../pages/CastDetails/reducer/cast-details';
 
 const rootReducer = combineReducers({
     App,
@@ -17,7 +18,8 @@ const rootReducer = combineReducers({
     Trending,
     Popular,
     Search,
-    MovieDetails
+    MovieDetails,
+    CastDetails
 });
 
 export default rootReducer;

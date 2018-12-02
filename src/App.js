@@ -10,10 +10,12 @@ import TrendingContainer from './pages/Trending/TrendingContainer';
 import PopularContainer from './pages/Popular/PopularContainer';
 import MovieDetailsContainer from "./pages/MovieDetails/MovieDetailsContainer";
 import SearchContainer from "./pages/Search/SearchContainer";
+import CastDetailsContainer from "./pages/CastDetails/CastDetailsContainer";
 import NotFound from './pages/404/NotFound';
 
 //Semantic UI CSS Setup
 import 'semantic-ui-css/semantic.min.css';
+
 
 class App extends Component {
   constructor(props) {
@@ -80,6 +82,7 @@ class App extends Component {
                       <Route path='/popular' component={PopularContainer}/>
                       <Route path='/search/:term' component={SearchContainer}/>
                       <Route path='/movie/:movieId' component={MovieDetailsContainer} />
+                      <Route path='/people/:castId' component={CastDetailsContainer}/>
                       <Route component={NotFound} />
                   </Switch>
               </Grid.Column>

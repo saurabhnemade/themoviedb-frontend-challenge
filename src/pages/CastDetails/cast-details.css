@@ -1,0 +1,16 @@
+.cast-detail-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.cast-detail-row-col {
+    flex: 1;
+}
+
+.cast-detail-row-col-fixed-width {
+    width: 150px;
+}
+
+.cast-detail-profile {
+    padding: 5px;
+}

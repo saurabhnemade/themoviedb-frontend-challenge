@@ -24,6 +24,10 @@ export default class MovieDetails extends Component {
         this.props._loadMovieCast(this.props.match.params.movieId);
     }
 
+    onGoToCastProfile = (cast) => {
+        this.props.history.push(`/people/${cast.id}`);
+    }
+
     render() {
         return (
             <div>
@@ -135,7 +139,7 @@ export default class MovieDetails extends Component {
                                             {this.props.casts.map((cast, index) => {
                                                 return (
                                                     <div className="movie-detail-profile" key={index}>
-                                                        <Label as='a' image>
+                                                        <Label as='a' image onClick={() => this.onGoToCastProfile(cast)}>
                                                             <Image src={`http://image.tmdb.org/t/p/w92/${cast.profile_path}`} onError={i => i.target.style.display='none'} />
                                                             {cast.name}
                                                             <Label.Detail>{cast.character}</Label.Detail>
