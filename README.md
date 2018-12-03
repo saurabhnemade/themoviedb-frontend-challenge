@@ -1,4 +1,4 @@
-# TheMovieDb Frontend Channelge
+# TheMovieDb Frontend Challenge
 
 [![Build Status](https://travis-ci.com/saurabhnemade/themoviedb-frontend-challenge.svg?branch=master)](https://travis-ci.com/saurabhnemade/themoviedb-frontend-challenge)
 
